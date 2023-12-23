@@ -136,3 +136,56 @@ body {
   transition-delay: 0.4s;
   opacity: 0; /* Hide the heart after the flap animation */
 }
+/* Existing code... */
+
+/* Add media queries for phone-friendly adjustments */
+@media screen and (max-width: 768px) {
+  body {
+    justify-content: flex-start; /* Align content to the top */
+    padding: 20px; /* Add padding to the body */
+  }
+
+  .container {
+    height: auto; /* Adjust height to fit content */
+    max-width: 90%; /* Limit width for smaller screens */
+  }
+
+  .envelope-wrapper {
+    width: 90%; /* Adjust envelope wrapper width */
+    max-width: 400px; /* Limit envelope width */
+  }
+
+  .envelope {
+    width: 100%; /* Adjust envelope width to fit the wrapper */
+    height: auto; /* Adjust envelope height */
+  }
+
+  .envelope::before {
+    border-top: 110px solid var(--envelope-tab); /* Adjust border size */
+    border-right: 100px solid transparent;
+    border-left: 100px solid transparent;
+  }
+
+  .envelope::after {
+    border-top: 110px solid transparent;
+    border-right: 100px solid var(--envelope-cover);
+    border-bottom: 110px solid var(--envelope-cover);
+    border-left: 100px solid var(--envelope-cover);
+  }
+
+  .envelope > .letter {
+    right: 5%; /* Adjust position */
+    bottom: 20%; /* Adjust position */
+    width: 90%; /* Adjust width */
+    height: 60%; /* Adjust height */
+  }
+
+  .envelope > .letter > .text {
+    font-size: 12px; /* Adjust font size */
+  }
+
+  .heart {
+    width: 10px; /* Adjust heart size */
+    height: 10px; /* Adjust heart size */
+  }
+}
