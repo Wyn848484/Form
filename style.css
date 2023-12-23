@@ -138,8 +138,8 @@ body {
 }
 /* Existing code... */
 
-/* Add media queries for phone-friendly adjustments */
-@media screen and (max-width: 768px) {
+/* Adjustments for iPhone XR */
+@media screen and (max-width: 414px) and (max-height: 896px) {
   body {
     justify-content: flex-start; /* Align content to the top */
     padding: 20px; /* Add padding to the body */
